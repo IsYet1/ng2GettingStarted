@@ -1,4 +1,5 @@
-﻿import { Component , OnChanges, Input } from 'angular2/core';
+﻿import { Component, OnChanges, Input,
+            Output, EventEmitter} from 'angular2/core';
 
 @Component({
     selector: 'ai-star',
@@ -10,7 +11,16 @@ export class StarComponent implements OnChanges {
     @Input() rating: number;
     starWidth: number;
 
+    @Output() ratingClicked: EventEmitter<string> =
+        new EventEmitter<string>();
+
     ngOnChanges(): void {
         this.starWidth = this.rating * 86 / 5;
+    }
+
+    onClick() {
+        //Back ticks isn't working. Will check/fix later.
+        //this.ratingClicked.emit(`The rating $(this.rating) was clicked!`); //Use backticks.
+        this.ratingClicked.emit('The rating ' + this.rating + ' was clicked');
     }
 }
