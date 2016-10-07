@@ -68,6 +68,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\products\product-list.component.css" />
     <Content Include="packages.config" />
     <Content Include="api\products\products.json" />
     <Content Include="app\home\welcome.component.js.map" />
