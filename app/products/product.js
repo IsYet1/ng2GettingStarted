@@ -5,6 +5,7 @@ System.register([], function(exports_1, context_1) {
     return {
         setters:[],
         execute: function() {
+            //Product class is for demonstration only. Not used.
             Product = (function () {
                 function Product(productId, productName, productCode, releaseDate, price, description, starRating, imageUrl) {
                     this.productId = productId;
